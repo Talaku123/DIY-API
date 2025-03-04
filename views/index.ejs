@@ -1,0 +1,27 @@
+
+
+<%- include("partials/header.ejs") %>
+
+   <div class="container" id="container">
+
+      <h1 class="head-blog">My <span>Blog</span></h1>
+
+      <a href="/new" id="newPost">New Post</a>
+
+      <ul id="postList">
+         <% posts.forEach(post=> { %>
+
+            <li>
+                  <h2><%= post.title %></h2>
+                  <h5><%= post.content %></h5>
+                  <small>Published: <%= post.author %></small>
+                  <p class="post-date"><span><%= post.date %></span> </p>
+                    <a id="edit-post" href="/edit/<%= post.id %>" class="edit">Edit</a>
+                    <a href="/api/posts/delete/<%= post.id %>" class="delete">Delete</a>
+             </li>
+
+            <% }) %>
+      </ul>
+   </div>
+
+   <%- include("partials/footer.ejs") %>

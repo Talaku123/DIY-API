@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(252, 255, 255);
+    font-family: 'Arial', sans-serif;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.container {
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.head-blog {
+    font-family: 'system UI', serif;
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+
+span {
+    color: red;
+}
+
+h1 {
+    font-stretch: ultra-condensed;
+    margin: 10px auto;
+    padding: 10px 60px;
+}
+
+/*------- this side is Index.ejs ----- */
+
+
+#newPost {
+    color: grey;
+    font-weight: 300;
+    text-decoration: none;
+    width: 100%;
+}
+
+#postList {
+    column-count: 3;
+    display: block;
+    gap: 40px;
+    list-style: none;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+#postList>li,
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 3px auto;
+    padding: 1px 0;
+}
+
+h2 {
+    color: rgb(97, 97, 97);
+    margin: 18px 0;
+}
+
+small {
+    display: flex;
+    font-weight: bolder;
+    margin: 15px 0;
+}
+
+.post-date {
+    margin-bottom: 15px;
+}
+
+.edit,
+.delete {
+    color: rgb(4, 74, 82);
+    font-size: 1rem;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#edit-post
+{
+    display: inline;
+    width: 100%;
+}
+
+.delete {
+    color: rgb(244, 133, 133);
+}
+
+
+
+/* -------- this side is Blog.ejs ------- */
+
+
+.blog-class {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 7px 0;
+}
+
+#input-txt,
+#input-txtarea {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 8px auto;
+    padding: 16px;
+    width: 700px;
+}
+
+.w-btn {
+    background: navajowhite;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 16px;
+}
+
+
+/* ----- foorter -------  */
+
+
+.footer-class {
+    color: gray;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 680px) {
+    #postList {
+        column-count: 2;
+        width: 100%;
+    }
+
+    #input-txt,
+    #input-txtarea {
+        width: 400px;
+    }
+}
