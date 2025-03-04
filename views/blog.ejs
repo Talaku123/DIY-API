@@ -1,16 +1,15 @@
-
 <%- include("partials/header.ejs") %>
-    <div class="container">
-        <h1>
+    <div class="container" id="container" main()>
+        <h1 class="mmm">
             <%= header %>
         </h1>
 
         <% if (locals.post) { %>
-            <form class="blog-class" action="/api/posts/<%= post.id %>" method="post">
-                <input type="text" name="title" id="input-txt" value="<%= post.title %>">
-                <textarea name="" id="input-txtarea"><%= post.content %></textarea>
-                <input id="input-txt"   type="text" name="author" value="<%= post.author %>">
-                <button class="w-btn" type="submit">
+            <form id="blog-edit" action="/api/posts/<%= post.id %>" method="post">
+                <input type="text" name="title" id="edit" value="<%= post.title %>">
+                <textarea name="content" id="areaedit"><%= post.content %></textarea>
+                <input id="editIn" type="text" name="author" value="<%= post.author %>">
+                <button id="btn" type="submit">
                     <%= submit %>
                 </button>
             </form>
@@ -26,4 +25,6 @@
                 </form>
                 <% } %>
     </div>
+
+
     <%- include("partials/footer.ejs") %>

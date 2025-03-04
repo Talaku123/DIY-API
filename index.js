@@ -20,6 +20,7 @@ app.get("/", async (req, res) => {
   }
 });
 
+
 app.get("/new", (req, res) => {
   res.render("blog.ejs",
   {
@@ -46,6 +47,7 @@ app.get("/edit/:id", async (req, res) => {
   }
 
 });
+
 
 app.post("/api/posts", async (req, res) => {
   try {

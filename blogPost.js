@@ -100,6 +100,7 @@ app.post("/posts", (req, res) => {
   res.status(201).json(post);
 });
 
+
 app.patch("/posts/:id", (req, res) => {
   const post = posts.find((p) => p.id === parseInt(req.params.id));
 
@@ -120,10 +121,6 @@ app.delete("/posts/:id", (req, res) => {
   posts.splice(index, 1);
   res.json({ message: " Post deleted" });
 });
-
-
-
-
 
 
 app.listen(PORT, () => {

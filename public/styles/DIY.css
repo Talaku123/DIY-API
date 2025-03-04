@@ -1,153 +1,173 @@
-* {
+*
+body,
+h1,
+h2,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+a {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: rgb(252, 255, 255);
+body
+{
+    background-color: rgb(14, 128, 128);
     font-family: 'Arial', sans-serif;
-    left: 0;
-    top: 0;
-    width: 100%;
+    line-height: 1.4;
 }
-
-.container {
-    align-items: baseline;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px auto;
-    padding: 40px;
+.container
+{
+    background-color: snow;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 50px  50px;
     text-align: center;
 }
 
-.head-blog {
+/* --------- Index Page ---------- */
+
+.head-blog
+{
     font-family: 'system UI', serif;
-    font-size: 3rem;
-    letter-spacing: 5px;
+   margin-bottom: 20px;
+    padding-top: 20px;
 }
 
-span {
+span
+{
     color: red;
 }
-
-h1 {
-    font-stretch: ultra-condensed;
-    margin: 10px auto;
-    padding: 10px 60px;
-}
-
-/*------- this side is Index.ejs ----- */
-
-
-#newPost {
-    color: grey;
-    font-weight: 300;
-    text-decoration: none;
-    width: 100%;
-}
-
-#postList {
-    column-count: 3;
-    display: block;
-    gap: 40px;
-    list-style: none;
-    margin: 20px auto;
-    text-align: justify;
-}
-
-#postList>li,
-h5 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 100;
-    margin: 3px auto;
-    padding: 1px 0;
-}
-
-h2 {
-    color: rgb(97, 97, 97);
-    margin: 18px 0;
-}
-
-small {
-    display: flex;
-    font-weight: bolder;
-    margin: 15px 0;
-}
-
-.post-date {
-    margin-bottom: 15px;
-}
-
-.edit,
-.delete {
-    color: rgb(4, 74, 82);
-    font-size: 1rem;
-    padding: 5px;
-    text-decoration: none;
-}
-
-#edit-post
+h2
 {
-    display: inline;
-    width: 100%;
+    color: rgb(8, 5, 17);
+    font-weight: 400 !important;
+    margin-top: -65px;
+
+}
+#postList
+{
+    column-count: 2;
+    gap: 90px;
+    margin-top: 25px;
 }
 
-.delete {
+li {
+    list-style: none;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+#edit-post, #delete-post, #newPost
+{
+    color: gray;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#delete-post
+{
     color: rgb(244, 133, 133);
 }
 
 
+#postList,
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: justify;
+}
 
-/* -------- this side is Blog.ejs ------- */
+#postList >li
+,small
+{
+    color: gray;
+    margin: 25px 0;
+}
+/* --------- BlogPage Here -------- */
 
 
 .blog-class {
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    padding: 7px 0;
+    cursor: pointer;
+    color: #fff;
+    margin: 20px 0;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
 }
 
-#input-txt,
-#input-txtarea {
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 18px;
+input,
+textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    outline: none;
     margin: 8px auto;
     padding: 16px;
+    transition: border 0.3s;
     width: 700px;
 }
 
 .w-btn {
-    background: navajowhite;
+    background: #eead4b;
     border: none;
     border-radius: 5px;
     font-size: 17px;
-    padding: 16px;
+    padding: 1rem 18rem;
+}
+.blog-edit
+{
+    max-height: 800px;
+    max-width: 500px;
 }
 
-
-/* ----- foorter -------  */
-
+#input-edit
+{
+    color: red;
+    position: relative;
+}
+/* ------- Footer Here --------- */
 
 .footer-class {
-    color: gray;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
     text-align: center;
 }
 
 
 
-@media screen and (max-width: 680px) {
-    #postList {
-        column-count: 2;
-        width: 100%;
+@media screen and (max-width: 680px){
+    .container
+    {
+        margin: 80px 30px;
+        max-width: 400px;
+        padding: 5px 10px;
     }
-
-    #input-txt,
-    #input-txtarea {
-        width: 400px;
+    #postList
+    {
+        column-count: 1;
+        gap: 20px;
     }
+    
+          #input-txt,
+          #input-txtarea {
+          
+              max-width: 355px;
+          }
+    
+          .w-btn {
+              padding: 2px 140px;
+              text-align: center;
+          }
 }
+
+

@@ -2,7 +2,7 @@
 
 <%- include("partials/header.ejs") %>
 
-   <div class="container" id="container">
+   <div class="container">
 
       <h1 class="head-blog">My <span>Blog</span></h1>
 
@@ -17,7 +17,7 @@
                   <small>Published: <%= post.author %></small>
                   <p class="post-date"><span><%= post.date %></span> </p>
                     <a id="edit-post" href="/edit/<%= post.id %>" class="edit">Edit</a>
-                    <a href="/api/posts/delete/<%= post.id %>" class="delete">Delete</a>
+                    <a id="delete-post" href="/api/posts/delete/<%= post.id %>" class="delete">Delete</a>
              </li>
 
             <% }) %>
