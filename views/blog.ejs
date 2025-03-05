@@ -1,4 +1,61 @@
 <%- include("partials/header.ejs") %>
+<style>
+ 
+    #container
+    {
+        width: 800px;
+        margin: 50px auto;
+        text-align: center;
+    }
+    #blog-edit
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+        padding: 10px 30px;
+    }
+    #edit
+    {
+        padding: 15px 0;
+    }
+    #areaedit
+    {
+        padding: 120px 0;
+        text-align: center;
+    }
+    #btn
+    {
+        background-color: rosybrown;
+        color: snow;
+        font-size: 25px;
+        padding: 16px 0;
+        text-align: center;
+    }
+    #edit,#areaedit,#btn
+    {
+        border: 0.2px solid black;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+    #footer
+    {
+        text-align: center;
+    }
+    @media screen and (max-width: 680px){
+       .mmm
+        {
+            padding-top: 30px;
+            padding-left: 40px;
+            text-align: start;
+        }
+        #edit,#areaedit,#btn
+        {
+            max-width: 380px;
+        }
+    }
+</style>
+
     <div class="container" id="container" main()>
         <h1 class="mmm">
             <%= header %>
@@ -8,7 +65,7 @@
             <form id="blog-edit" action="/api/posts/<%= post.id %>" method="post">
                 <input type="text" name="title" id="edit" value="<%= post.title %>">
                 <textarea name="content" id="areaedit"><%= post.content %></textarea>
-                <input id="editIn" type="text" name="author" value="<%= post.author %>">
+                <input id="edit" type="text" name="author" value="<%= post.author %>">
                 <button id="btn" type="submit">
                     <%= submit %>
                 </button>
